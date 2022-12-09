@@ -1,0 +1,68 @@
+@use "variables" as var;
+@use "mixins";
+
+body {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  background-color: rgb(98, 132, 255);
+}
+.hidden {
+  &__under {
+    transform: translateY(100%);
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 0.5s;
+  }
+  &__side {
+    transform: translateX(100%);
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 0.5s;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.startpage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+
+  &__header {
+    position: relative;
+    z-index: 10;
+    width: 80vw;
+    font-family: var.$primary-font;
+    font-size: 4rem;
+    margin-bottom: 2px;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 10;
+    width: 80vw;
+    font-family: var.$secondary-font;
+    transition-delay: 500ms;
+  }
+
+  &__blob {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}

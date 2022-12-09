@@ -1,0 +1,22 @@
+@use "variables" as var;
+@use "mixins";
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  position: fixed;
+
+  min-width: 100vw;
+  height: 10vh;
+
+  &__link {
+    font-family: var.$primary-font;
+    font-size: 1rem;
+    padding: 20px;
+
+    text-decoration: none;
+    color: black;
+  }
+}

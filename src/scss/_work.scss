@@ -1,0 +1,95 @@
+@use "variables" as var;
+@use "mixins";
+
+.hidden {
+  &__under {
+    transform: translateY(100%);
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 0.5s;
+  }
+  &__side {
+    transform: translateX(100%) rotate(45deg);
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 0.5s;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.work {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(98, 132, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+
+  &__title {
+    font-family: var.$primary-font;
+    font-size: 2rem;
+    width: 80%;
+    padding: 30px;
+  }
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+
+  &__title {
+    font-family: var.$primary-font;
+    font-size: 2rem;
+    transition-delay: 500ms;
+    margin-bottom: 5px;
+  }
+
+  &__type,
+  &__describe,
+  &__link {
+    font-family: var.$secondary-font;
+  }
+
+  &__type {
+    margin-bottom: 40px;
+  }
+
+  &__describe {
+    width: 80%;
+    text-align: center;
+  }
+
+  &__img--mobile {
+    width: 15%;
+    transition-delay: 700ms;
+  }
+
+  &__img--desktop {
+    width: 40%;
+  }
+
+  &__imgcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  a {
+    color: black;
+    font-size: 1.5rem;
+    &:hover {
+      color: white;
+    }
+  }
+}
