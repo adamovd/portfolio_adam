@@ -1,6 +1,16 @@
 import { Projects } from "./Projects";
 export let projects: Projects[] = [
   new Projects(
+    "Aurora Jewlery",
+    "School",
+    "https://i.ibb.co/c8GRcSL/aurora-mobile.png",
+    "https://i.ibb.co/xg90qLQ/aurora-desktop.png",
+    `As the last part of the course "Introduction to JavaScript" we were challenged with a group assignment, where we had to deliver a webshop. This website was created together with <a href="https://www.linkedin.com/in/hazany/">Hazan Yigit</a> and <a href="https://www.linkedin.com/in/jennie-forsell-18aba0244/">Jennie Forsell</a>.`,
+    "https://aurorajewlery.store",
+    "https://github.com/adamovd/Group_assignment_group_1.git",
+    "https://i.ibb.co/zN2hDQj/blob-haikei.png"
+  ),
+  new Projects(
     "Todo list",
     "School",
     "https://i.ibb.co/3fHzRRC/todo-mobile.png",
@@ -15,19 +25,19 @@ export let projects: Projects[] = [
     "School",
     "https://i.ibb.co/JjyJDdr/movies-mobile.png",
     "https://i.ibb.co/qpRZkwV/movies-desktop.png",
-    "Description of project",
+    `As a part of the course "Introduction to JavaScript" we learned the art of getting data from different APIs using Fetch and Axios. This movie database made for all film-loving species around the universe, displays data from <a href="omdbapi.com">OmdbAPI.com</a>.`,
     "Link to project",
     "https://github.com/adamovd/movie_api.git",
     "https://i.ibb.co/5xVgq4b/blob-haikei-1.png"
   ),
-  new Projects(
-    "Greenwashing",
-    "Private",
-    "mobile",
-    "ImageURL",
-    "Description of project",
-    "Link to project",
-    "https://github.com/adamovd/greenwashing.git",
-    "https://i.ibb.co/RTDVXyr/blob-haikei-2.png"
-  ),
+  // new Projects(
+  //   "Greenwashing",
+  //   "Private",
+  //   "mobile",
+  //   "ImageURL",
+  //   "Description of project",
+  //   "Link to project",
+  //   "https://github.com/adamovd/greenwashing.git",
+  //   "https://i.ibb.co/RTDVXyr/blob-haikei-2.png"
+  // ),
 ];

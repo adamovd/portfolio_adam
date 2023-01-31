@@ -4,7 +4,6 @@ import { contact } from "./models/pages/contact";
 import { navigation } from "./models/pages/navigation";
 import { startpage } from "./models/pages/startpage";
 import { work } from "./models/pages/work";
-import { getRepos } from "./services/IGithubRepos";
 
 function init() {
   navigation();
@@ -13,7 +12,6 @@ function init() {
   about();
   contact();
   hidden();
-  getRepos();
 }
 
 init();

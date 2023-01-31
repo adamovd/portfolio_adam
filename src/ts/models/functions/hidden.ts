@@ -10,7 +10,7 @@ export function hidden() {
   });
 
   const hiddenElements = document.querySelectorAll(
-    ".hidden__under, .hidden__side"
+    ".hidden__under, .hidden__right, .hidden__left"
   );
   hiddenElements.forEach((el) => observer.observe(el));
 }

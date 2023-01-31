@@ -23,10 +23,24 @@
   }
 }
 
-@mixin hidden {
+@mixin hidden__under {
   opacity: 0;
   filter: blur(5px);
   transform: translateY(100%);
+  transition: all 0.5s;
+}
+
+@mixin hidden__right {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%) rotate(45deg);
+  transition: all 0.5s;
+}
+
+@mixin hidden__left {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
   transition: all 0.5s;
 }
 

@@ -9,55 +9,53 @@ body {
   background-color: rgb(98, 132, 255);
 }
 .hidden {
+  overflow: hidden;
   &__under {
-    transform: translateY(100%);
-    opacity: 0;
-    filter: blur(5px);
-    transition: all 0.5s;
+    @include mixins.hidden__under;
   }
-  &__side {
-    transform: translateX(100%);
-    opacity: 0;
-    filter: blur(5px);
-    transition: all 0.5s;
+  &__right {
+    @include mixins.hidden__right;
   }
 }
 
 .show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
+  @include mixins.show;
 }
 
 .startpage {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 100vw;
   gap: 20px;
+  margin-left: 50px;
 
   &__header {
     position: relative;
-    z-index: 10;
     width: 80vw;
     font-family: var.$primary-font;
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 2px;
+    margin-top: 200px;
+    @include mixins.for-size(laptop) {
+      font-size: 4rem;
+    }
   }
 
   &__text {
     position: relative;
-    z-index: 10;
     width: 80vw;
     font-family: var.$secondary-font;
     transition-delay: 500ms;
-  }
-
-  &__blob {
-    position: absolute;
-    z-index: 1;
+    @include mixins.for-size(tablet) {
+      width: 50vw;
+    }
+    @include mixins.for-size(laptop) {
+      width: 40vw;
+      font-size: 1.5rem;
+    }
   }
 }
 

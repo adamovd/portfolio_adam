@@ -6,7 +6,7 @@ export function work() {
   workPageContainer.setAttribute("id", "work");
   workPageContainer.classList.add("work");
   workPageTitle.classList.add("work__title");
-  workPageTitle.innerHTML = "work";
+  workPageTitle.innerHTML = "#work";
   workPageContainer.appendChild(workPageTitle);
   document.body.appendChild(workPageContainer);
 
@@ -18,7 +18,7 @@ export function work() {
     let projectMobileImage: HTMLImageElement = document.createElement("img");
     let projectDesktopImage: HTMLImageElement = document.createElement("img");
     let projectDescription: HTMLSpanElement = document.createElement("span");
-    let projectLink: HTMLParagraphElement = document.createElement("p");
+    let projectLink: HTMLAnchorElement = document.createElement("a");
     let projectRepo: HTMLAnchorElement = document.createElement("a");
 
     projectContainer.classList.add("project");
@@ -28,12 +28,15 @@ export function work() {
     projectType.classList.add("hidden__under");
     projectImageDiv.classList.add("project__imgcontainer");
     projectMobileImage.classList.add("project__img--mobile");
-    projectMobileImage.classList.add("hidden__side");
+    projectMobileImage.classList.add("hidden__right");
     projectDesktopImage.classList.add("project__img--desktop");
-    projectDesktopImage.classList.add("hidden__under");
+    projectDesktopImage.classList.add("hidden__left");
     projectDescription.classList.add("project__describe");
+    projectDescription.classList.add("hidden__under");
     projectLink.classList.add("project__link");
+    projectLink.classList.add("hidden__under");
     projectRepo.classList.add("project__repo");
+    projectRepo.classList.add("hidden__under");
 
     projectTitle.innerHTML = project.title;
     projectType.innerHTML = project.type;
@@ -42,7 +45,9 @@ export function work() {
     projectDesktopImage.src = project.desktopimg;
     projectDesktopImage.alt = project.title + " desktop";
     projectDescription.innerHTML = project.description;
-    projectLink.innerHTML = project.link;
+    projectLink.innerHTML = "See project";
+    projectLink.href = project.link;
+    projectLink.target = "_blank";
     projectRepo.innerHTML = `<i class="fa-brands fa-github"></i>`;
     projectRepo.href = project.repo;
     projectRepo.target = "_blank";

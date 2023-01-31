@@ -1,0 +1,23 @@
+@use "variables" as var;
+@use "mixins";
+
+.about {
+  min-height: 100vh;
+  max-width: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-family: var.$primary-font;
+    font-size: 1rem;
+    width: 80%;
+    padding: 30px;
+  }
+
+  &__text {
+    font-family: var.$secondary-font;
+    width: 50%;
+  }
+}

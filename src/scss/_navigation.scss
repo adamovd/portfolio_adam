@@ -4,19 +4,82 @@
 .navigation {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
+  background-color: rgb(113, 144, 255);
+  width: 100vw;
+  height: 8vh;
+  z-index: 20;
 
-  min-width: 100vw;
-  height: 10vh;
+  &__linkcontainer {
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__logocontainer {
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 20px;
+    @include mixins.for-size(tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__socialcontainer {
+    display: none;
+    @include mixins.for-size(tablet) {
+      width: 33%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-right: 20px;
+    }
+  }
 
   &__link {
     font-family: var.$primary-font;
     font-size: 1rem;
     padding: 20px;
-
     text-decoration: none;
     color: black;
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+    @include mixins.for-size(tablet) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__logo {
+    width: 20px;
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+    @include mixins.for-size(tablet) {
+      width: 30px;
+    }
+  }
+
+  &__social {
+    display: none;
+    @include mixins.for-size(tablet) {
+      display: flex;
+      font-size: 1rem;
+      padding: 10px;
+      &:hover {
+        cursor: pointer;
+        color: white;
+      }
+      @include mixins.for-size(tablet) {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
