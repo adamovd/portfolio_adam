@@ -1,0 +1,34 @@
+@use "variables" as var;
+
+@mixin for-size($size) {
+  @if $size == mobile {
+    @media screen and (min-width: var.$mobile) {
+      @content;
+    }
+  }
+  @if $size == tablet {
+    @media screen and (min-width: var.$tablet) {
+      @content;
+    }
+  }
+  @if $size == laptop {
+    @media screen and (min-width: var.$laptop) {
+      @content;
+    }
+  }
+  @if $size == desktop {
+    @media screen and (min-width: var.$desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin darkmode {
+  background-color: var.$dark-bg-color;
+  color: var.$dark-font-color;
+}
+
+@mixin darkmode_list {
+  background-color: var.$dark-list-bg-color-first;
+  background: var.$dark-list-bg-color-second;
+}

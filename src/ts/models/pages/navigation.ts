@@ -43,6 +43,11 @@ export function navigation() {
   navigationAbout.href = "#about";
   navigationContact.href = "#contact";
   navigationLogoLink.href = "#startpage";
+  navigationGitHub.href = "https://github.com/adamovd";
+  navigationLinkedIn.href =
+    "https://www.linkedin.com/in/adam-danielsson-589265193/";
+  navigationGitHub.target = "_blank";
+  navigationLinkedIn.target = "_blank";
 
   navigationContainer.appendChild(navigationLinksContainer);
   navigationContainer.appendChild(navigationLogoContainer);
