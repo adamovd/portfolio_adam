@@ -1,0 +1,13 @@
+@use "mixins";
+
+.inner-cursor {
+  @include mixins.inner-cursor;
+}
+
+.inner-cursor.grow {
+  @include mixins.inner-cursor-grow;
+}
+
+.outer-cursor {
+  @include mixins.outer-cursor;
+}

@@ -1,3 +1,4 @@
+import { cursor } from "./models/functions/cursor";
 import { hidden } from "./models/functions/hidden";
 import { about } from "./models/pages/about";
 import { contact } from "./models/pages/contact";
@@ -12,6 +13,7 @@ function init() {
   about();
   contact();
   hidden();
+  cursor();
 }
 
 init();

@@ -7,6 +7,8 @@ body {
   top: 0;
   left: 0;
   background-color: rgb(98, 132, 255);
+  box-sizing: border-box;
+  cursor: none;
 }
 .hidden {
   overflow: hidden;
@@ -54,7 +56,7 @@ body {
     }
     @include mixins.for-size(laptop) {
       width: 40vw;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 }

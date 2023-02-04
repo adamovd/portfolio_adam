@@ -1,6 +1,7 @@
 export function about() {
   const aboutPageContainer: HTMLDivElement = document.createElement("div");
   const aboutPageTitle: HTMLParagraphElement = document.createElement("p");
+  const aboutPageImgContainer: HTMLDivElement = document.createElement("div");
   const aboutPageImage: HTMLImageElement = document.createElement("img");
   const aboutPageTextFirst: HTMLSpanElement = document.createElement("span");
   const aboutPageTextSecond: HTMLSpanElement = document.createElement("span");
@@ -10,6 +11,8 @@ export function about() {
   aboutPageContainer.setAttribute("id", "about");
   aboutPageContainer.classList.add("about");
   aboutPageTitle.classList.add("about__title");
+  aboutPageImgContainer.classList.add("about__imgcontainer");
+  aboutPageImgContainer.classList.add("hidden__under");
   aboutPageImage.classList.add("about__img");
   aboutPageTextFirst.classList.add("about__text--first");
   aboutPageTextSecond.classList.add("about__text--second");
@@ -21,17 +24,18 @@ export function about() {
   aboutPageResume.classList.add("underline");
 
   aboutPageTitle.innerHTML = "#about";
-  aboutPageImage.src =
-    "https://rushfiles.one/5fcb3385-c937-491c-adc3-a65ba8167f96";
+  aboutPageImage.src = "https://i.ibb.co/WW31dNm/adam.png";
   aboutPageTextFirst.innerHTML = `Hi, my name is Adam Danielsson and I am currently attending my first year at the Frontend Developer program at <a href="https://medieinstitutet.se/utbildningar/front-end-developer/" target="_blank" class="underline">Medieinstitutet</a> in Stockholm. During this initial time of the education I have established solid knowledge in HTML, CSS and JavaScript including various frameworks.`;
   aboutPageTextSecond.innerHTML = `With a background in design and a bachelor in <a href="https://mau.se/sok-utbildning/program/kgvik/" target="_blank" class="underline">Visual Communication</a> I have a strong foundation in design principles and an eye for detail, I bring my creativity and love for aesthetics to every project.`;
   aboutPageTextThird.innerHTML = `I am a fast learner who is always eager to expand my skills and knowledge in the field. With my passion for design, technical ability, and drive to succeed, I am confident in my capability to create stunning websites.`;
-  aboutPageResume.href = "https://pdfhost.io/v/YcnB.4GMt_Adam_Danielsson_CV";
+  aboutPageResume.href =
+    "https://indd.adobe.com/view/da4014b2-4ed5-4c9a-a555-a779a625c39e";
   aboutPageResume.target = "_blank";
   aboutPageResume.innerHTML = "my resume";
 
   aboutPageContainer.appendChild(aboutPageTitle);
-  aboutPageContainer.appendChild(aboutPageImage);
+  aboutPageContainer.appendChild(aboutPageImgContainer);
+  aboutPageImgContainer.appendChild(aboutPageImage);
   aboutPageContainer.appendChild(aboutPageTextFirst);
   aboutPageContainer.appendChild(aboutPageTextSecond);
   aboutPageContainer.appendChild(aboutPageTextThird);

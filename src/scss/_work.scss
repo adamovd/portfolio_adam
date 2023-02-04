@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "mixins";
+@use "cursor";
 
 .hidden {
   max-width: 100vw;
@@ -116,15 +117,16 @@
   }
 
   &__link {
-    transition-delay: 500ms;
+    transition-delay: 400ms;
   }
 
   &__repo {
     color: black;
     font-size: 1rem;
-    transition-delay: 500ms;
+    transition-delay: 700ms;
     &:hover {
       color: white;
+      cursor: none;
     }
   }
 

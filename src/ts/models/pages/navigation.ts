@@ -1,8 +1,3 @@
-import { about } from "./about";
-import { contact } from "./contact";
-import { startpage } from "./startpage";
-import { work } from "./work";
-
 export function navigation() {
   const navigationContainer: HTMLDivElement = document.createElement("div");
   const navigationLinksContainer: HTMLDivElement =
@@ -17,6 +12,7 @@ export function navigation() {
   const navigationLinkedIn: HTMLAnchorElement = document.createElement("a");
   const navigationLogoLink: HTMLAnchorElement = document.createElement("a");
   const navigationLogo: HTMLImageElement = document.createElement("img");
+  const navigationLogoHover: HTMLImageElement = document.createElement("img");
 
   navigationContainer.classList.add("navigation");
   navigationLinksContainer.classList.add("navigation__linkcontainer");
@@ -25,17 +21,17 @@ export function navigation() {
   navigationWork.classList.add("navigation__link");
   navigationAbout.classList.add("navigation__link");
   navigationContact.classList.add("navigation__link");
-  navigationWork.classList.add("navigation__link");
-  navigationAbout.classList.add("navigation__link");
-  navigationContact.classList.add("navigation__link");
+
   navigationGitHub.classList.add("navigation__social");
   navigationLinkedIn.classList.add("navigation__social");
   navigationLogo.classList.add("navigation__logo");
+  navigationLogoHover.classList.add("navigation__logo");
 
   navigationWork.innerHTML = "work";
   navigationAbout.innerHTML = "about";
   navigationContact.innerHTML = "contact";
   navigationLogo.src = "https://i.ibb.co/4gtYX6t/adam-logo.png";
+  navigationLogoHover.src = "https://i.ibb.co/vPB5NdK/adam-logo-stroke.png";
   navigationGitHub.innerHTML = `<i class="fa-brands fa-github"></i>`;
   navigationLinkedIn.innerHTML = `<i class="fa-brands fa-linkedin"></i>`;
 
@@ -57,6 +53,14 @@ export function navigation() {
   navigationLinksContainer.appendChild(navigationContact);
   navigationLogoContainer.appendChild(navigationLogoLink);
   navigationLogoLink.appendChild(navigationLogo);
+  navigationLogoLink.addEventListener("mouseenter", () => {
+    navigationLogoLink.appendChild(navigationLogoHover);
+    navigationLogoLink.removeChild(navigationLogo);
+  });
+  navigationLogoLink.addEventListener("mouseleave", () => {
+    navigationLogoLink.appendChild(navigationLogo);
+    navigationLogoLink.removeChild(navigationLogoHover);
+  });
   navigationSocialContainer.appendChild(navigationGitHub);
   navigationSocialContainer.appendChild(navigationLinkedIn);
   document.body.appendChild(navigationContainer);
