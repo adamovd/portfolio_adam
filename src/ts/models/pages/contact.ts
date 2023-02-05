@@ -68,7 +68,7 @@ export function contact() {
   contactFormSubmitButton.classList.add("form__button");
 
   contactForm.method = "POST";
-  contactForm.action = "https://formsubmit.co/938450292b158228acc4eea20da50854";
+  contactForm.action = "https://formsubmit.co/66bbe4914c83b8fb51f38a400fca1567";
   formReply.type = "hidden";
   formReply.name = "_next";
   formReply.value = "https://adamdanielsson.com/";
@@ -117,7 +117,7 @@ export function contact() {
   contactForm.appendChild(contactFormContactContainer);
   contactForm.appendChild(formReply);
   contactForm.appendChild(formResponse);
-  contactForm.appendChild(formCaptcha);
+
   contactFormNameContainer.appendChild(contactFormFirstNameContainer);
   contactFormNameContainer.appendChild(contactFormLastNameContainer);
   contactFormContactContainer.appendChild(contactFormMailContainer);

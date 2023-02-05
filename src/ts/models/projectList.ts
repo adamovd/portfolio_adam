@@ -25,7 +25,7 @@ export let projects: Projects[] = [
     "School",
     "https://i.ibb.co/JjyJDdr/movies-mobile.png",
     "https://i.ibb.co/qpRZkwV/movies-desktop.png",
-    `As a part of the course "Introduction to JavaScript" we learned the art of getting data from different APIs using Fetch and Axios. This movie database made for all film-loving species around the universe, displays data from <a class="underline" href="omdbapi.com">OmdbAPI.com</a>.`,
+    `As a part of the course "Introduction to JavaScript" we learned the art of getting data from different APIs using Fetch and Axios. This movie database made for all film-loving species around the universe, displays data from <a class="underline" href="https://omdbapi.com">OmdbAPI.com</a>.`,
     "../../pages/movie_api/index.html",
     "https://github.com/adamovd/movie_api.git",
     "https://i.ibb.co/5xVgq4b/blob-haikei-1.png"
