@@ -77,6 +77,10 @@
     }
   }
 
+  &__link {
+    transition-delay: 600ms;
+  }
+
   &__img--mobile {
     width: 50%;
     transition-delay: 700ms;
@@ -116,11 +120,6 @@
     }
   }
 
-  &__link {
-    font-family: var.$primary-font;
-    transition-delay: 400ms;
-  }
-
   &__repo {
     color: black;
     font-size: 1rem;
@@ -132,7 +131,6 @@
   }
 
   a {
-    font-family: var.$secondary-font;
     text-decoration: none;
     color: black;
     &:hover {

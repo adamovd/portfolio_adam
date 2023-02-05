@@ -11,15 +11,15 @@ export function work() {
   document.body.appendChild(workPageContainer);
 
   projects.forEach((project) => {
-    let projectContainer: HTMLDivElement = document.createElement("div");
-    let projectTitle: HTMLParagraphElement = document.createElement("p");
-    let projectType: HTMLParagraphElement = document.createElement("p");
-    let projectImageDiv: HTMLDivElement = document.createElement("div");
-    let projectMobileImage: HTMLImageElement = document.createElement("img");
-    let projectDesktopImage: HTMLImageElement = document.createElement("img");
-    let projectDescription: HTMLSpanElement = document.createElement("span");
-    let projectLink: HTMLAnchorElement = document.createElement("a");
-    let projectRepo: HTMLAnchorElement = document.createElement("a");
+    const projectContainer: HTMLDivElement = document.createElement("div");
+    const projectTitle: HTMLParagraphElement = document.createElement("p");
+    const projectType: HTMLParagraphElement = document.createElement("p");
+    const projectImageDiv: HTMLDivElement = document.createElement("div");
+    const projectMobileImage: HTMLImageElement = document.createElement("img");
+    const projectDesktopImage: HTMLImageElement = document.createElement("img");
+    const projectDescription: HTMLSpanElement = document.createElement("span");
+    const projectLink: HTMLAnchorElement = document.createElement("a");
+    const projectRepo: HTMLAnchorElement = document.createElement("a");
 
     projectContainer.classList.add("project");
     projectTitle.classList.add("project__title");

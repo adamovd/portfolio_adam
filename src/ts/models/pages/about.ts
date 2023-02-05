@@ -17,9 +17,9 @@ export function about() {
   aboutPageTextFirst.classList.add("about__text--first");
   aboutPageTextSecond.classList.add("about__text--second");
   aboutPageTextThird.classList.add("about__text--third");
-  aboutPageTextFirst.classList.add("hidden__under");
-  aboutPageTextSecond.classList.add("hidden__under");
-  aboutPageTextThird.classList.add("hidden__under");
+  aboutPageTextFirst.classList.add("hidden__left");
+  aboutPageTextSecond.classList.add("hidden__left");
+  aboutPageTextThird.classList.add("hidden__left");
   aboutPageResume.classList.add("about__resume");
   aboutPageResume.classList.add("underline");
 

@@ -5,7 +5,7 @@ export function cursor() {
   outerCursor.classList.add("outer-cursor");
   document.body.append(innerCursor);
   document.body.append(outerCursor);
-  let timeout;
+  let timeout: number | undefined;
 
   document.addEventListener("mousemove", (event) => {
     let x: number = event.clientX;
@@ -19,13 +19,13 @@ export function cursor() {
     outerCursor.style.display = "block";
   });
 
-  const mouseStopped = () => {
+  function mouseStopped() {
     innerCursor.style.display = "none";
     outerCursor.style.display = "none";
-  };
+  }
 
   clearTimeout(timeout);
-  timeout = setTimeout(mouseStopped, 2000);
+  timeout = setTimeout(mouseStopped, 1000);
 
   let links: HTMLAnchorElement[] = Array.from(document.querySelectorAll("a"));
   let buttons: HTMLButtonElement[] = Array.from(
@@ -48,5 +48,10 @@ export function cursor() {
     button.addEventListener("mouseleave", () => {
       innerCursor.classList.remove("grow");
     });
+  });
+
+  document.addEventListener("mouseout", () => {
+    innerCursor.style.display = "none";
+    outerCursor.style.display = "none";
   });
 }

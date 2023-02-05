@@ -28,6 +28,8 @@
 
 .form {
   width: 80vw;
+  font-family: var.$primary-font;
+  text-align: center;
   @include mixins.for-size(tablet) {
     width: 60vw;
   }

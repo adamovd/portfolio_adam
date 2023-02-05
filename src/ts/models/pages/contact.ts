@@ -3,6 +3,9 @@ export function contact() {
   const contactPageTitle: HTMLParagraphElement = document.createElement("p");
   const contactPageText: HTMLParagraphElement = document.createElement("p");
   const contactForm: HTMLFormElement = document.createElement("form");
+  const formCaptcha: HTMLInputElement = document.createElement("input");
+  const formReply: HTMLInputElement = document.createElement("input");
+  const formResponse: HTMLInputElement = document.createElement("input");
   const contactFormNameContainer: HTMLDivElement =
     document.createElement("div");
   const contactFormContactContainer: HTMLDivElement =
@@ -64,6 +67,18 @@ export function contact() {
   contactFormMessageInput.classList.add("form__input--message");
   contactFormSubmitButton.classList.add("form__button");
 
+  contactForm.method = "POST";
+  contactForm.action = "https://formsubmit.co/938450292b158228acc4eea20da50854";
+  formReply.type = "hidden";
+  formReply.name = "_next";
+  formReply.value = "https://adamdanielsson.com/";
+  formResponse.type = "hidden";
+  formResponse.name = "_autoresponse";
+  formResponse.value =
+    "Thanks for your e-mail, I'll get back to you as soon as possible!";
+  formCaptcha.type = "hidden";
+  formCaptcha.name = "_captcha";
+  formCaptcha.value = "false";
   contactFormFirstNameLabel.setAttribute("for", "firstName");
   contactFormLastNameLabel.setAttribute("for", "lastName");
   contactFormMailLabel.setAttribute("for", "mail");
@@ -72,13 +87,18 @@ export function contact() {
   contactFormFirstNameInput.setAttribute("id", "firstName");
   contactFormLastNameInput.setAttribute("id", "lastName");
   contactFormMailInput.setAttribute("id", "mail");
-  contactFormPhoneInput.setAttribute("id", "phonee");
+  contactFormPhoneInput.setAttribute("id", "phone");
   contactFormMessageInput.setAttribute("id", "message");
   contactFormFirstNameInput.type = "text";
   contactFormLastNameInput.type = "text";
   contactFormMailInput.type = "email";
   contactFormPhoneInput.type = "phone";
   contactFormSubmitButton.type = "submit";
+  contactFormFirstNameInput.name = "First Name";
+  contactFormLastNameInput.name = "Last Name";
+  contactFormMailInput.name = "email";
+  contactFormPhoneInput.name = "Phone";
+  contactFormMessageInput.name = "Message";
   contactFormFirstNameInput.required = true;
   contactFormLastNameInput.required = true;
   contactFormMailInput.required = true;
@@ -95,6 +115,9 @@ export function contact() {
 
   contactForm.appendChild(contactFormNameContainer);
   contactForm.appendChild(contactFormContactContainer);
+  contactForm.appendChild(formReply);
+  contactForm.appendChild(formResponse);
+  contactForm.appendChild(formCaptcha);
   contactFormNameContainer.appendChild(contactFormFirstNameContainer);
   contactFormNameContainer.appendChild(contactFormLastNameContainer);
   contactFormContactContainer.appendChild(contactFormMailContainer);
