@@ -39,7 +39,7 @@ body {
     width: 80vw;
     font-family: var.$primary-font;
     font-size: 3rem;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     margin-top: 200px;
     @include mixins.for-size(laptop) {
       font-size: 4rem;
@@ -51,12 +51,14 @@ body {
     width: 80vw;
     font-family: var.$secondary-font;
     transition-delay: 500ms;
+    font-size: 0.9rem;
+    margin-top: 5px;
     @include mixins.for-size(tablet) {
       width: 50vw;
     }
     @include mixins.for-size(laptop) {
       width: 40vw;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 }
