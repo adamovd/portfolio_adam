@@ -12,7 +12,7 @@ export function about() {
   aboutPageContainer.classList.add("about");
   aboutPageTitle.classList.add("about__title");
   aboutPageImgContainer.classList.add("about__imgcontainer");
-  aboutPageImgContainer.classList.add("hidden__under");
+  aboutPageImgContainer.classList.add("hidden__left");
   aboutPageImage.classList.add("about__img");
   aboutPageTextFirst.classList.add("about__text--first");
   aboutPageTextSecond.classList.add("about__text--second");

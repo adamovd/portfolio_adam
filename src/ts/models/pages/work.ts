@@ -3,14 +3,11 @@ import { projects } from "../projectList";
 export function work() {
   const workPageContainer: HTMLDivElement = document.createElement("div");
   const workPageTitle: HTMLParagraphElement = document.createElement("p");
-  const cursor: HTMLDivElement = document.createElement("div");
   workPageContainer.setAttribute("id", "work");
   workPageContainer.classList.add("work");
   workPageTitle.classList.add("work__title");
   workPageTitle.innerHTML = "#work";
-  cursor.classList.add("cursor");
   workPageContainer.appendChild(workPageTitle);
-  document.body.appendChild(cursor);
   document.body.appendChild(workPageContainer);
 
   projects.forEach((project) => {
@@ -37,7 +34,7 @@ export function work() {
     projectDescription.classList.add("project__describe");
     projectDescription.classList.add("hidden__under");
     projectLink.classList.add("project__link");
-    projectLink.classList.add("hidden__left");
+    projectLink.classList.add("hidden__under");
     projectLink.classList.add("underline");
     projectRepo.classList.add("project__repo");
     projectRepo.classList.add("hidden__under");
@@ -64,7 +61,6 @@ export function work() {
     projectContainer.appendChild(projectDescription);
     projectContainer.appendChild(projectLink);
     projectContainer.appendChild(projectRepo);
-    projectContainer.appendChild(cursor);
     workPageContainer.appendChild(projectContainer);
   });
 

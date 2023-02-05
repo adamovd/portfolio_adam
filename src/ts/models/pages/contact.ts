@@ -1,8 +1,12 @@
 export function contact() {
   const contactPageContainer: HTMLDivElement = document.createElement("div");
   const contactPageTitle: HTMLParagraphElement = document.createElement("p");
-
+  const contactPageText: HTMLParagraphElement = document.createElement("p");
   const contactForm: HTMLFormElement = document.createElement("form");
+  const contactFormNameContainer: HTMLDivElement =
+    document.createElement("div");
+  const contactFormContactContainer: HTMLDivElement =
+    document.createElement("div");
   const contactFormFirstNameContainer: HTMLDivElement =
     document.createElement("div");
   const contactFormFirstNameLabel: HTMLLabelElement =
@@ -39,7 +43,10 @@ export function contact() {
   contactPageContainer.setAttribute("id", "contact");
   contactPageContainer.classList.add("contact");
   contactPageTitle.classList.add("contact__title");
+  contactPageText.classList.add("contact__text");
   contactForm.classList.add("form");
+  contactFormNameContainer.classList.add("form__names");
+  contactFormContactContainer.classList.add("form__contacts");
   contactFormFirstNameContainer.classList.add("form__container");
   contactFormLastNameContainer.classList.add("form__container");
   contactFormMailContainer.classList.add("form__container");
@@ -78,6 +85,7 @@ export function contact() {
   contactFormMessageInput.required = true;
 
   contactPageTitle.innerHTML = "#contact";
+  contactPageText.innerHTML = "Get in touch with me!";
   contactFormFirstNameLabel.innerHTML = "First Name";
   contactFormLastNameLabel.innerHTML = "Last Name";
   contactFormMailLabel.innerHTML = "Mail";
@@ -85,10 +93,12 @@ export function contact() {
   contactFormMessageLabel.innerHTML = "Your Message";
   contactFormSubmitButton.innerHTML = "Submit";
 
-  contactForm.appendChild(contactFormFirstNameContainer);
-  contactForm.appendChild(contactFormLastNameContainer);
-  contactForm.appendChild(contactFormMailContainer);
-  contactForm.appendChild(contactFormPhoneContainer);
+  contactForm.appendChild(contactFormNameContainer);
+  contactForm.appendChild(contactFormContactContainer);
+  contactFormNameContainer.appendChild(contactFormFirstNameContainer);
+  contactFormNameContainer.appendChild(contactFormLastNameContainer);
+  contactFormContactContainer.appendChild(contactFormMailContainer);
+  contactFormContactContainer.appendChild(contactFormPhoneContainer);
   contactForm.appendChild(contactFormMessageContainer);
   contactForm.appendChild(contactFormSubmitButton);
   contactFormFirstNameContainer.appendChild(contactFormFirstNameLabel);
@@ -102,6 +112,7 @@ export function contact() {
   contactFormMessageContainer.appendChild(contactFormMessageLabel);
   contactFormMessageContainer.appendChild(contactFormMessageInput);
   contactPageContainer.appendChild(contactPageTitle);
+  contactPageContainer.appendChild(contactPageText);
   contactPageContainer.appendChild(contactForm);
   document.body.appendChild(contactPageContainer);
 }

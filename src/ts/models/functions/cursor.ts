@@ -28,12 +28,24 @@ export function cursor() {
   timeout = setTimeout(mouseStopped, 2000);
 
   let links: HTMLAnchorElement[] = Array.from(document.querySelectorAll("a"));
+  let buttons: HTMLButtonElement[] = Array.from(
+    document.querySelectorAll("button")
+  );
 
   links.forEach((link) => {
     link.addEventListener("mouseover", () => {
       innerCursor.classList.add("grow");
     });
     link.addEventListener("mouseleave", () => {
+      innerCursor.classList.remove("grow");
+    });
+  });
+
+  buttons.forEach((button) => {
+    button.addEventListener("mouseover", () => {
+      innerCursor.classList.add("grow");
+    });
+    button.addEventListener("mouseleave", () => {
       innerCursor.classList.remove("grow");
     });
   });
