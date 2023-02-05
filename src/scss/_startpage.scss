@@ -8,15 +8,24 @@ body {
   left: 0;
   background-color: rgb(98, 132, 255);
   box-sizing: border-box;
-  cursor: none;
+
+  @include mixins.for-size(tablet) {
+    cursor: none;
+  }
 }
+
 .hidden {
+  max-width: 100vw;
   overflow: hidden;
+
   &__under {
     @include mixins.hidden__under;
   }
   &__right {
     @include mixins.hidden__right;
+  }
+  &__left {
+    @include mixins.hidden__left;
   }
 }
 
@@ -41,6 +50,7 @@ body {
     font-size: 3rem;
     margin-bottom: 5px;
     margin-top: 200px;
+
     @include mixins.for-size(laptop) {
       font-size: 4rem;
     }
@@ -50,7 +60,6 @@ body {
     position: relative;
     width: 80vw;
     font-family: var.$secondary-font;
-    transition-delay: 500ms;
     font-size: 0.9rem;
     margin-top: 5px;
     @include mixins.for-size(tablet) {

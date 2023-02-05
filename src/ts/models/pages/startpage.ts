@@ -8,7 +8,7 @@ export function startpage() {
   startPageHeader.classList.add("startpage__header");
   startPageText.classList.add("startpage__text");
   startPageHeader.classList.add("hidden__under");
-  startPageText.classList.add("hidden__under");
+  startPageText.classList.add("hidden__left");
 
   startPageHeader.innerHTML = `Hello, </br> my name is Adam.`;
   startPageText.innerHTML = `I´m a Frontend Developer student based in Stockholm, with an interest in finding

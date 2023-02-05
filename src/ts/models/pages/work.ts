@@ -34,8 +34,8 @@ export function work() {
     projectDescription.classList.add("project__describe");
     projectDescription.classList.add("hidden__under");
     projectLink.classList.add("project__link");
-    projectLink.classList.add("hidden__under");
     projectLink.classList.add("underline");
+    projectLink.classList.add("hidden__under");
     projectRepo.classList.add("project__repo");
     projectRepo.classList.add("hidden__under");
 

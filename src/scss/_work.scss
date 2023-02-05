@@ -47,7 +47,7 @@
   &__title {
     font-family: var.$primary-font;
     font-size: 1.5rem;
-    transition-delay: 500ms;
+    transition-delay: 200ms;
     margin-bottom: 5px;
     @include mixins.for-size(laptop) {
       font-size: 2rem;
@@ -58,12 +58,13 @@
   &__describe,
   &__link {
     font-family: var.$secondary-font;
+    font-size: 0.9rem;
     margin-bottom: 10px;
   }
 
   &__type {
-    font-size: 0.9rem;
     margin-bottom: 40px;
+    transition-delay: 200ms;
     @include mixins.for-size(tablet) {
       margin-bottom: 20px;
     }
@@ -72,18 +73,17 @@
   &__describe {
     width: 80%;
     text-align: center;
-    transition-delay: 400ms;
+    transition-delay: 500ms;
     margin-bottom: 20px;
-    font-size: 0.9rem;
+
     @include mixins.for-size(laptop) {
       width: 55%;
     }
   }
 
   &__link {
-    transition-delay: 600ms;
+    transition-delay: 700ms;
     margin-bottom: 20px;
-    font-size: 0.9rem;
   }
 
   &__img--mobile {
@@ -128,7 +128,7 @@
   &__repo {
     color: black;
     font-size: 1rem;
-    transition-delay: 700ms;
+    transition-delay: 900ms;
     margin-bottom: 40px;
     &:hover {
       color: white;
