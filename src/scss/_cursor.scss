@@ -1,5 +1,11 @@
 @use "mixins";
 
+body {
+  @include mixins.for-size(tablet) {
+    cursor: none;
+  }
+}
+
 .inner-cursor {
   @include mixins.inner-cursor;
 }

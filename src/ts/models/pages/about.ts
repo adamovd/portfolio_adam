@@ -26,8 +26,8 @@ export function about() {
   aboutPageTitle.innerHTML = "#about";
   aboutPageImage.src = "https://i.ibb.co/c8nMYmd/adam-1.png";
   aboutPageTextFirst.innerHTML = `Hi, my name is Adam Danielsson and I am currently attending my first year at the Frontend Developer program at <a href="https://medieinstitutet.se/utbildningar/front-end-developer/" target="_blank" class="underline">Medieinstitutet</a> in Stockholm. During this initial time of the education I have established solid knowledge in HTML, CSS and JavaScript including various frameworks.`;
-  aboutPageTextSecond.innerHTML = `With a background in design and a bachelor in <a href="https://mau.se/sok-utbildning/program/kgvik/" target="_blank" class="underline">Visual Communication</a> I have a strong foundation in design principles and an eye for detail, I bring my creativity and love for aesthetics to every project.`;
-  aboutPageTextThird.innerHTML = `I am a fast learner who is always eager to expand my skills and knowledge in the field. With my passion for design, technical ability, and drive to succeed, I am confident in my capability to create stunning websites.`;
+  aboutPageTextSecond.innerHTML = `With a background in design and a bachelor in <a href="https://mau.se/sok-utbildning/program/kgvik/" target="_blank" class="underline">Visual Communication</a> I have a strong foundation in design principles and an eye for detail, and bring my creativity and love for aesthetics to every project.`;
+  aboutPageTextThird.innerHTML = `I am a fast learner who is always eager to learn more and expand my skills.`;
   aboutPageResume.href =
     "https://indd.adobe.com/view/d70c9e51-5c67-49ca-8f1f-97d78ec72052";
   aboutPageResume.target = "_blank";
