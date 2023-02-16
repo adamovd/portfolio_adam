@@ -1,7 +1,10 @@
 # Portfolio
 
-- [Link to my live website!](https://adamdanielsson.com)
+[adamdanielsson.com](https://adamdanielsson.com)
 
-**This is my Portfolio**
+This is my portfolio, containing some of the porjects I´ve worked on during the first semester of my education on the two year programme *Front End Developer* at *Medieinstitutet* in Stockholm.
 
-It's created using _TypeScript_ and _SCSS_ and contains some of my projects, an about page and a contact form.
+### Technologies
+
+- TypeScript
+- SCSS
